@@ -1,0 +1,50 @@
+<!--HTML-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<title>Truzz Blogg - Trabajando con Pseudo Elementos en CSS</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Para usar una fuente de Google fonts, simplemente copiamos su enlace en el head (2 fuentes: Lobster|Nunito)-->
+<link href="https://fonts.googleapis.com/css?family=Lobster|Nunito" rel="stylesheet">
+
+</head>
+<body>
+
+	<h1>Entendiendo el funcionamiento de los Pseudo Elementos en CSS</h1>	
+	<h2>::first-letter  |  ::first:line	</h2>
+	<p class="primera-letra">Los que desean aprender un poco más de CSS, encontrarán en este vídeo, un truco avanzado de CSS que nos permite poner la primera letra de un parráfo, en mayúsculas. Para ello, se utiliza el Pseudo Elemento <strong>::first-letter</strong>.Esto lo habrás visto en muchas webs (y también en revistas lo suelen utilizar bastante)...y ahora ya sabes como hacerlo! Espero que aprendas algo interesante en este vídeo...y puedas así, dar un aspecto más personalizado a tus webs. Saludos!</p>
+
+	<p class="primera-linea">Simplemente voy a copiar lo mismo que existe en el párrafo anterior, para que entiendas también el funcionamiento del Pseudo Elemento <strong>::first:line</strong>. Los que desean aprender un poco más de CSS, encontrarán en este vídeo, un truco avanzado de CSS que nos permite poner la primera letra de un parráfo, en mayúsculas. Esto lo habrás visto en muchas webs (y también en revistas lo suelen utilizar bastante)...y ahora ya sabes como hacerlo! Espero que aprendas algo interesante en este vídeo...y puedas así, dar un aspecto más personalizado a tus webs. Saludos!</p>
+	
+</body>
+</html>
+
+<!--FIN-HTML-->
+
+/*CSS*/
+
+/*Esta es la hoja de estilos donde definimos las características de nuestro CSS*/
+
+
+html, body {
+	text-align: center;
+	font-family: 'Nunito', sans-serif; /*Siempre se recomienda poner una fuente estandar al final (sans-serif, helvetica, etc...)*/
+	}
+
+p {
+	width: 1000px;
+	padding: 20px;
+	margin: 0 auto;
+	font-family: 'Lobster', cursive;
+	font-size: 1.2em;
+}
+
+p.primera-letra::first-letter {
+	font-size: 80px;
+	font-family: 'Nunito';
+	line-height: 0;
+	margin-right: 2px;
+}
